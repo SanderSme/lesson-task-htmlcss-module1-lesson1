@@ -12,6 +12,9 @@ html {
   height: 48px;
 }
 
+/*ID: has the highest specifity level, it always wins.
+Only way to override it is by writing inline styles(not advisable)*/
+
 .my-header .logo {
   display: inline-block;
   color: #fff;
@@ -32,9 +35,18 @@ html {
   margin-right: 30px;
 }
 
-.navigation ul li a {
+/*general selection:
+any anchor tag that inside .navigation will be white*/
+
+.navigation a {
   color: #fff;
   text-decoration: none;
+}
+/*direct descendant of .navigation*/
+.navigation > a {
+  color: blue;
+  border: 1px dotted yellow;
+  padding: 10px;
 }
 
 .hero-banner {
@@ -56,4 +68,57 @@ html {
 
 .footer {
   background-color: brown;
+}
+
+body#home-page {
+  background-color: seashell;
+}
+body#home-page h1 {
+  color: rgb(20, 20, 20);
+}
+body#home-page header {
+  background-color: rgb(20, 20, 20);
+}
+
+body#contact-page {
+  background-color: rgb(91, 110, 145);
+}
+body#contact-page h1 {
+  color: rgb(20, 20, 20);
+}
+body#contact-page header {
+  background-color: rgb(20, 20, 20);
+}
+
+body#about-page {
+  background-color: teal;
+}
+body#about-page h1 {
+  color: red;
+}
+body#about-page header {
+  background-color: chartreuse;
+}
+
+body#guitar-page {
+  background-color: rgb(206, 165, 103);
+}
+body#guitar-page h1 {
+  color: rgb(0, 0, 0);
+}
+body#guitar-page header {
+  background-color: rgb(20, 20, 20);
+}
+
+.hero-banner-guitar {
+  background-image: url(/img/guitar-3.png);
+  background-size: cover;
+  height: 420px;
+  width: 680px;
+}
+
+.hero-banner-contact {
+  background-color: rgb(91, 110, 145);
+  background-size: cover;
+  height: 420px;
 }
