@@ -122,3 +122,17 @@ body#guitar-page header {
   background-size: cover;
   height: 420px;
 }
+
+.picture-of-guitar {
+  background-image: url(/img/guitar-2.png);
+  background-size: cover;
+  height: 240px;
+  width: 240px;
+}
+
+.picture-of-person {
+  background-image: url(/img/person-1.png);
+  background-size: cover;
+  height: 240px;
+  width: 240px;
+}
